@@ -20,6 +20,7 @@
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/1-3.png)
   	 
 <details>
+	
 	Started by user admin
 	Running as SYSTEM
 	Building in workspace /var/lib/jenkins/workspace/my-pipe2
@@ -112,8 +113,8 @@
 	  + docker logout
 	  Removing login credentials for https://index.docker.io/v1/
 	  Finished: SUCCESS   
-</details>
 
+</details>
 
 </details>
 

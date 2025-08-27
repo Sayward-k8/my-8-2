@@ -134,6 +134,32 @@ Finished: SUCCESS
 ### Решение 2
 
 <details>
+	
+```
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git branch: 'main', url: 'https://github.com/Sayward-k8/8-2-hw'}
+  }
+  stage('Test') {
+   steps {
+    sh 'go test .'
+   }
+  }
+  stage('Build') {
+   steps {
+    sh 'docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER'
+   }
+  }
+  stage('Push') {
+   steps {
+    sh 'docker login ubuntu-bionic:8082 -u admin -p admin1 && docker push ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER && docker logout'   }
+  }
+ }
+}
+
+```
 
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-1.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-2.png)
@@ -157,6 +183,42 @@ Finished: SUCCESS
 
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-1.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-2.png)
+
+```
+pipeline {
+    agent any
+    
+    environment {
+        NEXUS_URL = "http://ubuntu-bionic:8081"
+        REPOSITORY = "raw-repo"
+        BINARY_NAME = "hello-world"
+        VERSION = "v${BUILD_NUMBER}"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Sayward-k8/8-2-hw'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                sh 'CGO_ENABLED=0 GOOS=linux go build -a -installsuffix nocgo -o ${BINARY_NAME} .'
+            }
+        }
+        
+        stage('Upload to Nexus') {
+            steps {
+                sh '''
+                    curl -u admin:admin1 -X PUT --upload-file ${BINARY_NAME} \
+                    "${NEXUS_URL}/repository/${REPOSITORY}/${BINARY_NAME}-${VERSION}"
+                '''
+            }
+        }
+    }
+}
+```
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-3.png)
 
 </details>

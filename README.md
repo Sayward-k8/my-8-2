@@ -94,8 +94,6 @@ pipeline {
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-1.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-2.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-3.png)
-![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-4.png)
-![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-5.png)
 
 ```
 pipeline {
@@ -131,7 +129,9 @@ pipeline {
     }
 }
 ```
-![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-3.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-4.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-5.png)
+
 
 </details>
 
@@ -182,7 +182,6 @@ pipeline {
     }
 }
 ```
-
 
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-2.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-3.png)

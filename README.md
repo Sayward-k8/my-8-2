@@ -163,6 +163,8 @@ pipeline {
 
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-1.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-2.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-3.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-4.png)
  
 </details>
 
@@ -183,6 +185,56 @@ pipeline {
 
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-1.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-2.png)
+
+```
+pipeline {
+    agent any
+    
+    environment {
+        NEXUS_URL = "http://ubuntu-bionic:8081"
+        REPOSITORY = "raw-repo"
+        BINARY_NAME = "hello-world"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Sayward-k8/8-2-hw'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                sh 'CGO_ENABLED=0 GOOS=linux go build -a -installsuffix nocgo -o ${BINARY_NAME} .'
+            }
+        }
+        
+        stage('Upload to Nexus') {
+            steps {
+                sh '''
+                    curl -u admin:admin1 -X PUT --upload-file ${BINARY_NAME} \
+                    "${NEXUS_URL}/repository/${REPOSITORY}/${BINARY_NAME}"
+                '''
+            }
+        }
+    }
+}
+```
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-3.png)
+
+</details>
+
+### Задание 4*
+
+Придумайте способ версионировать приложение, чтобы каждый следующий запуск сборки присваивал имени файла новую версию. Таким образом, в репозитории Nexus будет храниться история релизов.
+
+Подсказка: используйте переменную BUILD_NUMBER.
+
+В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
+
+### Решение 4
+
+<details>
 
 ```
 pipeline {
@@ -219,23 +271,8 @@ pipeline {
     }
 }
 ```
-![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-3.png)
 
-</details>
 
-### Задание 4*
-
-Придумайте способ версионировать приложение, чтобы каждый следующий запуск сборки присваивал имени файла новую версию. Таким образом, в репозитории Nexus будет храниться история релизов.
-
-Подсказка: используйте переменную BUILD_NUMBER.
-
-В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
-
-### Решение 4
-
-<details>
-
-![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-1.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-2.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-3.png)
 

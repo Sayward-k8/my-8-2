@@ -21,10 +21,10 @@
 
 </details>
 
-<details>
+<Вывод консоли>
 
+Вывод консоли
 ```
-
 Started by user admin
 Running as SYSTEM
 Building in workspace /var/lib/jenkins/workspace/my-pipe2
@@ -120,7 +120,7 @@ Finished: SUCCESS
 
 ```
 
-</details>
+</Вывод консоли>
 
 ### Задание 2
 

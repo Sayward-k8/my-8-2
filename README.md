@@ -21,7 +21,7 @@
 
 </details>
 
-<Вывод консоли>
+<details>
 
 Вывод консоли
 ```
@@ -120,7 +120,7 @@ Finished: SUCCESS
 
 ```
 
-</Вывод консоли>
+</details>
 
 ### Задание 2
 
@@ -133,18 +133,33 @@ Finished: SUCCESS
 
 ### Решение 2
 
+<details>
+
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-1.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/2-2.png)
+ 
+</details>
+
 ### Задание 3
 
 **Что нужно сделать:**
 
 1. Установите на машину Nexus.
-1. Создайте raw-hosted репозиторий.
-1. Измените pipeline так, чтобы вместо Docker-образа собирался бинарный go-файл. Команду можно скопировать из Dockerfile.
-1. Загрузите файл в репозиторий с помощью jenkins.
+2. Создайте raw-hosted репозиторий.
+3. Измените pipeline так, чтобы вместо Docker-образа собирался бинарный go-файл. Команду можно скопировать из Dockerfile.
+4. Загрузите файл в репозиторий с помощью jenkins.
 
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
 
 ### Решение 3
+
+<details>
+
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-1.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-2.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/3-3.png)
+
+</details>
 
 ### Задание 4*
 
@@ -155,3 +170,11 @@ Finished: SUCCESS
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
 
 ### Решение 4
+
+<details>
+
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-1.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-2.png)
+![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/4-3.png)
+
+</details>

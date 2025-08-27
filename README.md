@@ -19,28 +19,28 @@
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/1-3.png)
   	 
 <details>
-	 * Started by user admin
-	 * Running as SYSTEM
-	 * Building in workspace /var/lib/jenkins/workspace/my-pipe2
-	 * The recommended git tool is: NONE
-	 * No credentials specified
-	 *  > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/my-pipe2/.git # timeout=10
-	 * Fetching changes from the remote Git repository
-	 *  > git config remote.origin.url https://github.com/Sayward-k8/sdvps-materials # timeout=10
-	 * Fetching upstream changes from https://github.com/Sayward-k8/sdvps-materials
-	 *  > git --version # timeout=10
-	 *  > git --version # 'git version 2.43.0'
-	 *  > git fetch --tags --force --progress -- https://github.com/Sayward-k8/sdvps-materials +refs/heads/*:refs/remotes/origin/* # timeout=10
-	 *  > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-	 * Checking out Revision 223dbc3f489784448004e020f2ef224f17a7b06d (refs/remotes/origin/main)
-	 *  > git config core.sparsecheckout # timeout=10
-	 *  > git checkout -f 223dbc3f489784448004e020f2ef224f17a7b06d # timeout=10
-	 * Commit message: "Update README.md"
-	 *  > git rev-list --no-walk 223dbc3f489784448004e020f2ef224f17a7b06d # timeout=10
-	 * [my-pipe2] $ /bin/sh -xe /tmp/jenkins12395962510819315908.sh
-	 * + /usr/local/go/bin/go test .
-	 * ok  	github.com/netology-code/sdvps-materials	(cached)
-	 * + docker build . -t ubuntu-bionic:8082/hello-world:v9
+	* Started by user admin
+	* Running as SYSTEM
+	* Building in workspace /var/lib/jenkins/workspace/my-pipe2
+	* The recommended git tool is: NONE
+	* No credentials specified
+	*  > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/my-pipe2/.git # timeout=10
+	* Fetching changes from the remote Git repository
+	*  > git config remote.origin.url https://github.com/Sayward-k8/sdvps-materials # timeout=10
+	* Fetching upstream changes from https://github.com/Sayward-k8/sdvps-materials
+	*  > git --version # timeout=10
+	*  > git --version # 'git version 2.43.0'
+	*  > git fetch --tags --force --progress -- https://github.com/Sayward-k8/sdvps-materials +refs/heads/*:refs/remotes/origin/* # timeout=10
+	*  > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+	* Checking out Revision 223dbc3f489784448004e020f2ef224f17a7b06d (refs/remotes/origin/main)
+	*  > git config core.sparsecheckout # timeout=10
+	*  > git checkout -f 223dbc3f489784448004e020f2ef224f17a7b06d # timeout=10
+	* Commit message: "Update README.md"
+	*  > git rev-list --no-walk 223dbc3f489784448004e020f2ef224f17a7b06d # timeout=10
+	* [my-pipe2] $ /bin/sh -xe /tmp/jenkins12395962510819315908.sh
+	* + /usr/local/go/bin/go test .
+	* ok  	github.com/netology-code/sdvps-materials	(cached)
+	* + docker build . -t ubuntu-bionic:8082/hello-world:v9
 	  #0 building with "default" instance using docker driver
 	  
 	  #1 [internal] load build definition from Dockerfile

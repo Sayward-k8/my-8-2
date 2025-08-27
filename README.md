@@ -18,7 +18,9 @@
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/1-1.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/1-2.png)
 ![alt text](https://github.com/Sayward-k8/my-8-2/blob/main/img/1-3.png)
-  	 
+
+</details>
+
 <details>
 
 '''
@@ -115,8 +117,6 @@
 	  Removing login credentials for https://index.docker.io/v1/
 	  Finished: SUCCESS   
 '''
-
-</details>
 
 </details>
 

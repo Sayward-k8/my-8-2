@@ -23,7 +23,8 @@
 
 <details>
 
-'''
+```
+
 Started by user admin
 Running as SYSTEM
 Building in workspace /var/lib/jenkins/workspace/my-pipe2
@@ -117,7 +118,7 @@ v9: digest: sha256:d32b99accc4e2453999bee5bfa1755a1b34018458f2afb1f4e39718ba8fde
 Removing login credentials for https://index.docker.io/v1/
 Finished: SUCCESS   
 
-'''
+```
 
 </details>
 
